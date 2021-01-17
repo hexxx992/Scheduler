@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import Course from './Course';
 import TermSelector from './TermSelector'
 
@@ -17,8 +17,8 @@ const CourseList = ({courses}) => {
   
   return (
     <ScrollView>
-      <View  style={styles.courseList}>
       <TermSelector selectedTerm={selectedTerm} setSelectedTerm = {setSelectedTerm} />
+      <View style={styles.courseList}>
       { termCourses.map(course => <Course key={course.id} course={course} />) }
       </View>
     </ScrollView>
