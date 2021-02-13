@@ -31,8 +31,8 @@ const ScheduleScreen = ({navigation}) => {
 
     return (
         <SafeAreaView style={styles.container}>
-        <Banner title={schedule.title} />
-        <CourseList courses={schedule.courses} view={view}/>
+            <Banner title={schedule.title} />
+            <CourseList courses={schedule.courses} view={view}/>
         </SafeAreaView>
     );
 };

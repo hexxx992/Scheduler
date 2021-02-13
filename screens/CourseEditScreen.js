@@ -4,19 +4,18 @@ import Form from '../components/Form';
 import firebase from '../firebase';
 import * as Yup from 'yup';
 
-
 const validationSchema = Yup.object().shape({
-    id: Yup.string()
-      .required()
-      .matches(/(F|W|S)\d{3,}/, 'Must be a term and 3-digit number')
-      .label('ID'),
-    meets: Yup.string()
-      .required()
-      .matches(/(M|Tu|W|Th|F)+ +\d\d?:\d\d-\d\d?:\d\d/, 'Must be weekdays followed by start and end time')
-      .label('Meeting times'),
-    title: Yup.string()
-      .required()
-      .label('Title'),
+  id: Yup.string()
+    .required()
+    .matches(/(F|W|S)\d{3,}/, 'Must be a term and 3-digit number')
+    .label('ID'),
+  meets: Yup.string()
+    .required()
+    .matches(/(M|Tu|W|Th|F)+ +\d\d?:\d\d-\d\d?:\d\d/, 'Must be weekdays followed by start and end time')
+    .label('Meeting times'),
+  title: Yup.string()
+    .required()
+    .label('Title'),
 });
 
 const Field = ({label, value}) => {
